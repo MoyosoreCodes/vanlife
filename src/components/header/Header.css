@@ -1,0 +1,35 @@
+a {
+  text-decoration: none;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 25px 34px 26px;
+  gap: 200px;
+  background: #fff7ed;
+}
+
+.logo {
+  color: #000;
+  font-family: Inter;
+  font-size: 25.353px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.nav-container {
+  min-width: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-container > a {
+  font-family: Inter;
+  color: #4d4d4d;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+}
