@@ -1,7 +1,12 @@
 .homepage {
-  background: url(https://s3-alpha-sig.figma.com/img/050a/aa4a/9b62f902c3de6d1b54b3a5d23341752c?Expires=1691971200&Signature=gGc3jsZk8a4c8rdsIxBzqzaVaS-XNRYcT9-QLw5D7GU9RDJ8gKFq62rwOURHhRz~JLZeTJxXvQYuIqA79h9qcn3WUfLgjqCBFGFrQvpi7IcwbdpeJuLIQTpoD2X9RZN6v3EoITCqUYHLU7C-ETZYGZ8A6LsacRWdiOgkhqa5Awkq5YAiGgN9Fm9zU4O6twC4z4TaF89RscW4Fp~03kQNzayOh1HYdE8PVPiEiwRG4PUf0sk-iOtU8cUxiuFwqiaq8OZNALulNHBotELHoMShVMjXiPdXyQmMvUAsBVXCHgSFMo1jkRq72z3IIiSslLMpMG-16QV08FEzBKQfVFk6ow__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)),
+    url("../../assets/img/home-hero.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   width: 100vw;
-  height: 100vh;
+  min-height: 784px;
   color: #fff;
   display: flex;
   flex-direction: column;
