@@ -6,13 +6,15 @@ interface ButtonProps {
   padding?: string;
   textColor?: string;
   borderRadius?: string
+  onClick?: () => void;
 }
 export default function Button({
   text,
   background,
   textColor,
   padding,
-  borderRadius
+  borderRadius, 
+  onClick
 }: ButtonProps) {
   return (
     <button
@@ -23,6 +25,7 @@ export default function Button({
         borderRadius: borderRadius || "5px",
       }}
       className="app-button"
+      onClick={onClick}
     >
       {text}
     </button>
