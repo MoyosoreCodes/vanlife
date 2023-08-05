@@ -4,23 +4,21 @@ import { useState } from "react";
 
 export default function HostLayout() {
   const [links, setLinks] = useState([
-    { to: "/host", label: "Dashboard" },
-    { to: "/host/income", label: "Income" },
-    { to: "/host/reviews", label: "Reviews" },
+    { to: "/host", label: "Dashboard", isIndex: true },
+    { to: "/host/income", label: "Income", isIndex: false },
+    { to: "/host/vans", label: "Vans", isIndex: false },
+    { to: "/host/reviews", label: "Reviews", isIndex: false },
   ]);
 
-  const hostLinks = links.map(({ to, label }) => (
-    // <NavLink to={to} className={(isActive) => (isActive ? "active-link" : "")}>
-    //   {label}
-    // </NavLink>
-    <NavLink to={to} >
+  const hostLinks = links.map(({ to, label, isIndex }) => (
+    <NavLink to={to} end={isIndex}>
       {label}
     </NavLink>
   ));
 
   return (
-    <main>
-      <nav className="nav-container">{hostLinks}</nav>
+    <main className="host-container">
+      <nav className="navigation">{hostLinks}</nav>
       <Outlet />
     </main>
   );

@@ -10,18 +10,14 @@ export default function Header() {
   ]);
 
   const headerLinks = links.map(({ to, label }) => (
-    <NavLink
-      to={to}
-    >
-      {label}
-    </NavLink>
+    <NavLink to={to}>{label}</NavLink>
   ));
   return (
     <header className="header-container">
       <Link to="/" className="logo">
         #VANLIFE
       </Link>
-      <nav className="nav-container">{headerLinks}</nav>
+      <nav className="navigation">{headerLinks}</nav>
     </header>
   );
 }

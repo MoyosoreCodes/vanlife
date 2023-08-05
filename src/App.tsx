@@ -20,6 +20,7 @@ function App() {
           <Route path="/host" element={<HostLayout />}>
             <Route index element={""} />
             <Route path="income" element={""} />
+            <Route path="vans" element={""} />
             <Route path="reviews" element={""} />
           </Route>
         </Route>
