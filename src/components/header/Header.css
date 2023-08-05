@@ -9,12 +9,12 @@ a {
   padding: 36px 25px 34px 26px;
   gap: 200px;
   background: #fff7ed;
+  width: 100vw;
 }
 
 .logo {
   color: #000;
-  font-family: Inter;
-  font-size: 25.353px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 900;
 }
@@ -27,7 +27,6 @@ a {
 }
 
 .nav-container > a {
-  font-family: Inter;
   color: #4d4d4d;
   font-size: 16px;
   font-style: normal;

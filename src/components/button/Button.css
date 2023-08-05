@@ -1,0 +1,8 @@
+.app-button {
+  border: none;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+}

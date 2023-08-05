@@ -1,14 +1,14 @@
-// import { } from 'react'
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/header/header";
+import Header from "./components/header/Header";
+import Home from "./pages/home/Home";
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route></Route>
+        <Route path="/" element={<Home />}> </Route>
       </Routes>
     </BrowserRouter>
   );
