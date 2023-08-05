@@ -2,10 +2,10 @@ import "./Button.css";
 
 interface ButtonProps {
   text: string;
-  background: string;
+  background?: string;
   padding?: string;
   textColor?: string;
-  borderRadius?: string
+  borderRadius?: string;
   onClick?: () => void;
 }
 export default function Button({
@@ -13,13 +13,13 @@ export default function Button({
   background,
   textColor,
   padding,
-  borderRadius, 
-  onClick
+  borderRadius,
+  onClick,
 }: ButtonProps) {
   return (
     <button
       style={{
-        background,
+        background: background || "#161616",
         padding: padding || "12px 22px 13px 22px",
         color: textColor || "white",
         borderRadius: borderRadius || "5px",
