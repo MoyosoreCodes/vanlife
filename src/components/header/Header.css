@@ -2,6 +2,10 @@ a {
   text-decoration: none;
 }
 
+nav a.active-link {
+  border: 1px solid black;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
