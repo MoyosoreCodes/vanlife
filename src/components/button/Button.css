@@ -5,4 +5,9 @@
   font-weight: 700;
   cursor: pointer;
   width: 100%;
+  border-radius: 10px;
+  background: #161616;
+  color: #fff;
+  padding: 12px 22px 13px 22px;
+  line-height: 24px;
 }

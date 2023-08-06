@@ -1,33 +1,18 @@
+import { ButtonHTMLAttributes, FC } from "react";
 import "./Button.css";
 
-interface ButtonProps {
-  text: string;
-  background?: string;
-  padding?: string;
-  textColor?: string;
-  borderRadius?: string;
-  onClick?: () => void;
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: string;
+  icon?: React.ReactNode;
 }
-export default function Button({
-  text,
-  background,
-  textColor,
-  padding,
-  borderRadius,
-  onClick,
-}: ButtonProps) {
+const Button: FC<ButtonProps> = (props) => {
+  const { icon, children, className, ...rest } = props;
   return (
-    <button
-      style={{
-        background: background || "#161616",
-        padding: padding || "12px 22px 13px 22px",
-        color: textColor || "white",
-        borderRadius: borderRadius || "5px",
-      }}
-      className="app-button"
-      onClick={onClick}
-    >
-      {text}
+    <button className={`app-button ${className}`} {...rest}>
+      <span>{icon}</span>
+      <span>{children}</span>
     </button>
   );
-}
+};
+
+export default Button;

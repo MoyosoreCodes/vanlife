@@ -16,11 +16,9 @@ export default function Home() {
       </p>
 
       <div className="action">
-        <Button
-          text="Find your van"
-          background="#FF8C38"
-          onClick={viewAllVans}
-        />
+        <Button className="action-btn" onClick={viewAllVans}>
+          Find your van
+        </Button>
       </div>
     </main>
   );

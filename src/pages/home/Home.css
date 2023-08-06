@@ -23,3 +23,8 @@
 .homepage > .action {
   width: min(90%, 850px);
 }
+
+.action-btn {
+border-radius: 5px;
+  background: #ff8c38;
+}
