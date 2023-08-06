@@ -1,0 +1,51 @@
+.vans-container {
+  padding: 54px 27px;
+}
+
+.vans-container .title {
+  color: #161616;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px;
+}
+
+.vans-container .filter-section {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+}
+
+.vans-container .filter-section .filters {
+  min-width: 380px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.vans-container .filter-section .filters .filter-item {
+  border-radius: 5px;
+  background: #ffead0;
+  padding: 6px 26px 7px 26px;
+}
+
+.vans-container .filter-section .clear-btn {
+  cursor: pointer;
+  text-decoration: underline;
+  margin: 0 40px;
+  min-width: 90px;
+}
+
+@media (max-width: 565px) {
+  .vans-container .filter-section,
+  .vans-container .filter-section .filters {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 17px;
+  }
+
+  .vans-container .filter-section .clear-btn {
+    margin: 0 10px;
+  }
+}

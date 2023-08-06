@@ -4,6 +4,7 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import MainLayout from "./layouts/main-layout/MainLayout";
 import HostLayout from "./layouts/host-layout/HostLayout";
+import Vans from "./pages/vans";
 
 function App() {
   return (
@@ -12,9 +13,9 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="vans" >
-            <Route index element={""}/>
-            <Route path=":id" element={""}/>
+          <Route path="vans">
+            <Route index element={<Vans />} />
+            <Route path=":id" element={""} />
           </Route>
 
           <Route path="/host" element={<HostLayout />}>

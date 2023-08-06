@@ -26,7 +26,9 @@ export default function About() {
           <div className="items">
             <h2>Your destination is waiting. Your van is ready.</h2>
             <div className="item-btn">
-              <Button text="Explore our vans" onClick={viewAllVans} />
+              <Button onClick={viewAllVans}>
+                Explore our vans
+              </Button>
             </div>
           </div>
         </div>
