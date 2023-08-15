@@ -1,4 +1,3 @@
-
 export interface VanProps {
   imageUrl: string;
   type: string;
@@ -7,7 +6,13 @@ export interface VanProps {
 }
 
 export interface VanItem extends VanProps {
-  id: string
-  hostId: string, 
+  id: string;
+  hostId: string;
   description: string;
+}
+
+export interface FilterItem {
+  label: string;
+  value: string;
+  selected?: boolean;
 }

@@ -26,6 +26,12 @@
   border-radius: 5px;
   background: #ffead0;
   padding: 6px 26px 7px 26px;
+  cursor: pointer;
+}
+
+.vans-container .filter-section .filters .selected {
+  background:#161616;
+  color: #ffead0;
 }
 
 .vans-container .filter-section .clear-btn {
@@ -42,7 +48,7 @@
 .vans-container .van-list-section .vans {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 45px;
+  gap: 30px;
   align-items: center;
   justify-content: center;
 }

@@ -79,7 +79,12 @@ createServer({
     this.logging = false;
 
     this.get("/vans", (schema, request) => {
-      return schema.vans.all();
+      // console.log({ request })
+      const result = schema.vans.all();
+      if (request.queryParams?.type) {
+        return result?.filter((van) => van?.type === request.queryParams?.type);
+      }
+      return result;
     });
 
     this.get("/vans/:id", (schema, request) => {
