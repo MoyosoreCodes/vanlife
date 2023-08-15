@@ -35,6 +35,18 @@
   min-width: 90px;
 }
 
+.vans-container .van-list-section {
+  margin: 40px 0;
+}
+
+.vans-container .van-list-section .vans {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 45px;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 565px) {
   .vans-container .filter-section,
   .vans-container .filter-section .filters {
@@ -43,6 +55,12 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 17px;
+  }
+
+  .vans-container .van-list-section .vans {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 45px;
   }
 
   .vans-container .filter-section .clear-btn {

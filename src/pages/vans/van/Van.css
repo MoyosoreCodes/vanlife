@@ -1,0 +1,30 @@
+.van-item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.van-item .description {
+  display: flex;
+  justify-content: space-between;
+  color: #161616;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.van-item .description .price {
+  display: block;
+}
+
+.van-item .description .price .extra {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.van-item .type {
+  color: #FFEAD0;
+  color: #000;
+  padding: 2px 10px;
+}

@@ -10,8 +10,8 @@ export default function HostLayout() {
     { to: "/host/reviews", label: "Reviews", isIndex: false },
   ]);
 
-  const hostLinks = links.map(({ to, label, isIndex }) => (
-    <NavLink to={to} end={isIndex}>
+  const hostLinks = links.map(({ to, label, isIndex }, index) => (
+    <NavLink to={to} end={isIndex} key={index}>
       {label}
     </NavLink>
   ));

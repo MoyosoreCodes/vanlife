@@ -1,24 +1,52 @@
 import "./App.css";
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/home/Home";
-import About from "./pages/about/About";
 import MainLayout from "./layouts/main-layout/MainLayout";
 import HostLayout from "./layouts/host-layout/HostLayout";
-import Vans from "./pages/vans";
-
+const Home = lazy(() => import("./pages/home/Home"));
+const About = lazy(() => import("./pages/about/About"));
+const Vans = lazy(() => import("./pages/vans"));
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainLayout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
+          <Route
+            index
+            element={
+              <Suspense fallback={<p>Loading...</p>}>
+                <Home />
+              </Suspense>
+            }
+          />
+          <Route
+            path="about"
+            element={
+              <Suspense fallback={<p>Loading...</p>}>
+                <About />
+              </Suspense>
+            }
+          />
           <Route path="vans">
-            <Route index element={<Vans />} />
+            <Route
+              index
+              element={
+                <Suspense fallback={<p>Loading...</p>}>
+                  <Vans />
+                </Suspense>
+              }
+            />
             <Route path=":id" element={""} />
           </Route>
 
-          <Route path="/host" element={<HostLayout />}>
+          <Route
+            path="/host"
+            element={
+              <Suspense fallback={<p>Loading...</p>}>
+                <HostLayout />
+              </Suspense>
+            }
+          >
             <Route index element={""} />
             <Route path="income" element={""} />
             <Route path="vans" element={""} />
