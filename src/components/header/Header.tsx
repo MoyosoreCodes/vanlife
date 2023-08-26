@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 export default function Header() {
-  const [links, setLinks] = useState([
+  const [links, _] = useState([
     { to: "/host", label: "Host" },
     { to: "/about", label: "About" },
     { to: "/vans", label: "Vans" },

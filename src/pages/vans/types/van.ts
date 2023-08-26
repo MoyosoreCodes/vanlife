@@ -3,16 +3,23 @@ export interface VanProps {
   type: string;
   price: string;
   name: string;
+  onClick?: () => void
 }
 
 export interface VanItem extends VanProps {
   id: string;
   hostId: string;
   description: string;
+  onClick?: () => void
 }
 
-export interface FilterItem {
+export interface VanFilterItem {
   label: string;
   value: string;
-  selected?: boolean;
+}
+
+export const VanTypeColorMap = {
+  "simple": "#E17654",
+  "rugged": "#115E59",
+  "luxury": "#161616"
 }

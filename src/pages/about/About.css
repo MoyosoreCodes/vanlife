@@ -1,5 +1,5 @@
 .about-hero-image {
-  width: 100vw;
+  width: 100%;
   height: 302px;
 }
 
@@ -7,7 +7,7 @@
   padding: 53px 30px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 39px;
 }
 
 .explore-container {

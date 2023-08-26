@@ -1,6 +1,6 @@
-import Button from "../../components/button/Button";
 import "./About.css";
 import { useNavigate } from "react-router-dom";
+import Button from "../../components/button/Button";
 import heroImage from "../../assets/img/about-hero.png";
 
 export default function About() {

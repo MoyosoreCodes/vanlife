@@ -6,6 +6,7 @@ import HostLayout from "./layouts/host-layout/HostLayout";
 const Home = lazy(() => import("./pages/home/Home"));
 const About = lazy(() => import("./pages/about/About"));
 const Vans = lazy(() => import("./pages/vans"));
+const VanDetails = lazy(() => import("./pages/vans/vandetails/VanDetails"));
 function App() {
   return (
     <BrowserRouter>
@@ -36,7 +37,14 @@ function App() {
                 </Suspense>
               }
             />
-            <Route path=":id" element={""} />
+            <Route
+              path=":vanId"
+              element={
+                <Suspense fallback={<p>Loading...</p>}>
+                  <VanDetails />
+                </Suspense>
+              }
+            />
           </Route>
 
           <Route

@@ -1,18 +1,18 @@
 import "./index.css";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Van from "./van/Van";
-import "../../server/server.ts";
-import { VanItem, FilterItem } from "./types/Van.ts";
+import { VanItem, VanFilterItem } from "./types/van.ts";
+
 const Vans = () => {
-  const [filters, _] = useState<FilterItem[]>([
-    { label: "Simple", value: "simple", selected: false },
-    { label: "Luxury", value: "luxury", selected: false },
-    { label: "Rugged", value: "rugged", selected: false },
+  const navigate = useNavigate();
+  const [filters, _] = useState<VanFilterItem[]>([
+    { label: "Simple", value: "simple" },
+    { label: "Luxury", value: "luxury" },
+    { label: "Rugged", value: "rugged" },
   ]);
 
-  const [activeFilter, setActiveFilter] = useState<FilterItem | undefined>(
-    undefined
-  );
+  const [activeFilter, setActiveFilter] = useState<VanFilterItem | null>(null);
 
   const [vans, setVans] = useState<VanItem[]>([]);
 
@@ -26,17 +26,21 @@ const Vans = () => {
   }
 
   function clearFilter() {
-    setActiveFilter(undefined);
+    setActiveFilter(null);
   }
 
   function fetchVans() {
-    let url = "api/vans";
+    let url = "/api/vans";
     if (activeFilter) {
       url += `?type=${activeFilter.value}`;
     }
     fetch(url)
       .then((res) => res.json())
       .then((data) => setVans(data?.vans));
+  }
+
+  function viewVanDetail(vanId: string) {
+    navigate(`/vans/${vanId}`);
   }
 
   const displayFilters = filters.map(({ label, value }, index) => (
@@ -59,6 +63,7 @@ const Vans = () => {
         name={van?.name}
         price={van?.price}
         type={van?.type}
+        onClick={() => viewVanDetail(van?.id)}
       />
     );
   });
