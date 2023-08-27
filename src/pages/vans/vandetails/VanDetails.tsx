@@ -6,7 +6,7 @@ import Chip from "../../../components/chip/Chip";
 import Button from "../../../components/button/Button";
 import { VanItem, VanTypeColorMap } from "../types/van";
 
-const VanDetails: FC<VanItem> = () => {
+const VanDetails: FC = () => {
   const navigate = useNavigate();
   const { vanId } = useParams();
 

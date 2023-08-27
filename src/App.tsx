@@ -7,6 +7,7 @@ const Home = lazy(() => import("./pages/home/Home"));
 const About = lazy(() => import("./pages/about/About"));
 const Vans = lazy(() => import("./pages/vans"));
 const VanDetails = lazy(() => import("./pages/vans/vandetails/VanDetails"));
+const NotFound = lazy(() => import("./pages/404/NotFound"));
 function App() {
   return (
     <BrowserRouter>
@@ -60,6 +61,14 @@ function App() {
             <Route path="vans" element={""} />
             <Route path="reviews" element={""} />
           </Route>
+          <Route
+            path="*"
+            element={
+              <Suspense fallback={<p>Loading...</p>}>
+                <NotFound />
+              </Suspense>
+            }
+          />
         </Route>
       </Routes>
     </BrowserRouter>
