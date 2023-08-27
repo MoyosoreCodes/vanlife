@@ -1,11 +1,13 @@
 import "./index.css";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import Van from "./van/Van";
 import { VanItem, VanFilterItem } from "./types/van.ts";
 
 const Vans = () => {
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+  // console.log(searchParams.get("type"));
   const [filters, _] = useState<VanFilterItem[]>([
     { label: "Simple", value: "simple" },
     { label: "Luxury", value: "luxury" },
@@ -20,16 +22,21 @@ const Vans = () => {
     fetchVans();
   }, [activeFilter?.value]);
 
-  function handleFilterSelection(index: number) {
-    const selectedFilter = filters.find((_, i) => index === i);
-    if (selectedFilter) setActiveFilter(selectedFilter);
+  function handleFilterSelection(filterValue: string) {
+    const selectedFilter = filters.find((_) => _.value === filterValue);
+    if (selectedFilter) {
+      setActiveFilter(selectedFilter);
+      setSearchParams({ type: filterValue });
+    }
   }
 
   function clearFilter() {
     setActiveFilter(null);
+    setSearchParams();
   }
 
   function fetchVans() {
+    handleFilterSelection('')
     let url = "/api/vans";
     if (activeFilter) {
       url += `?type=${activeFilter.value}`;
@@ -49,7 +56,7 @@ const Vans = () => {
         value === activeFilter?.value ? "selected" : ""
       }`}
       key={index}
-      onClick={() => handleFilterSelection(index)}
+      onClick={() => handleFilterSelection(value)}
     >
       {label}
     </span>
