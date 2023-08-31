@@ -5,6 +5,7 @@ import LeftArrow from "../../../components/svgs/LeftArrow";
 import Chip from "../../../components/chip/Chip";
 import Button from "../../../components/button/Button";
 import { VanItem, VanTypeColorMap } from "../types/van";
+import NotFound from "../../404/NotFound";
 
 const VanDetails: FC = () => {
   const navigate = useNavigate();
@@ -43,7 +44,7 @@ const VanDetails: FC = () => {
       <div className="van-detail">
         {loading ? (
           <p className="loading">Loading...</p>
-        ) : (
+        ) : vanDetail ? (
           <div className="items">
             <img
               src={vanDetail?.imageUrl}
@@ -65,6 +66,8 @@ const VanDetails: FC = () => {
               <Button className="rent-btn">Rent this van</Button>
             </div>
           </div>
+        ) : (
+          <NotFound content="van" pageName="all vans" pageUrl="/vans" />
         )}
       </div>
     </section>

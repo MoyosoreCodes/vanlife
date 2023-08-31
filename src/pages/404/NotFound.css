@@ -9,4 +9,5 @@
 
 .not-found-container .return-btn {
   border-radius: 5px;
+  width: min(90%, 850px);
 }

@@ -1,5 +1,5 @@
 .vans-container {
-  padding: 54px 27px;
+  padding: 50px 30px;
 }
 
 .vans-container .title {
@@ -47,7 +47,7 @@
 
 .vans-container .van-list-section .vans {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 30px;
   align-items: center;
   justify-content: center;

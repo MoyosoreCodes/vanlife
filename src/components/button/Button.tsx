@@ -2,7 +2,7 @@ import "./Button.css";
 import { ButtonHTMLAttributes, FC } from "react";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: string;
+  children: React.ReactNode;
   icon?: React.ReactNode;
 }
 const Button: FC<ButtonProps> = (props) => {

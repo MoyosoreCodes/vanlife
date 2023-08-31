@@ -1,11 +1,7 @@
 import { FC } from "react";
+import { SVGProps } from "../../types/svg";
 
-interface LeftArrowProps {
-  width?: string;
-  height?: string;
-  color?: string;
-}
-const LeftArrow: FC<LeftArrowProps> = ({
+const LeftArrow: FC<SVGProps> = ({
   width = "14",
   height = "11",
   color = "#858585",
