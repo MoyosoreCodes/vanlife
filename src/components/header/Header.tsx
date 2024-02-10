@@ -8,7 +8,7 @@ export default function Header() {
     { to: "/host", label: "Host" },
     { to: "/about", label: "About" },
     { to: "/vans", label: "Vans" },
-    { to: "/auth/login", label: UserIcon  },
+    { to: "/auth/login", label: null, icon: UserIcon },
   ]);
 
   const headerLinks = links.map(({ to, label }, index) => (

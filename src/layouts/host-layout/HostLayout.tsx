@@ -1,9 +1,9 @@
-import { NavLink, Outlet } from "react-router-dom";
 import "./HostLayout.css";
+import { NavLink, Outlet } from "react-router-dom";
 import { useState } from "react";
 
-export default function HostLayout() {
-  const [links, setLinks] = useState([
+export default function PHostLayout() {
+  const [links, _] = useState([
     { to: "/host", label: "Dashboard", isIndex: true },
     { to: "/host/income", label: "Income", isIndex: false },
     { to: "/host/vans", label: "Vans", isIndex: false },
