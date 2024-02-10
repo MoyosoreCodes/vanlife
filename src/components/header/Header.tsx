@@ -8,15 +8,12 @@ export default function Header() {
     { to: "/host", label: "Host" },
     { to: "/about", label: "About" },
     { to: "/vans", label: "Vans" },
-    { to: "/auth/login", label: null, icon: UserIcon },
+    { to: "/auth/login", label: null, icon: <UserIcon /> },
   ]);
 
-  const headerLinks = links.map(({ to, label }, index) => (
-    <NavLink to={to} key={index}>
-      <span>
-        {label}
-        {/* {icon} */}
-      </span>
+  const headerLinks = links.map(({ to, label, icon }, index) => (
+    <NavLink to={to} key={index} className={({ isActive }) => (isActive && icon ? "active-icon" : isActive ? "active" : "")}>
+      {icon ? icon : label}
     </NavLink>
   ));
   return (

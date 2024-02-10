@@ -21,7 +21,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 1.25rem;
-  padding: 0 5px;
+  padding: 0 0.5rem;
 }
 
 .header-container .navigation a {
@@ -36,9 +36,10 @@
 }
 
 .header-container .navigation a.active {
-  color: #fff;
-  background: #161616;
-  padding: 6px 9px;
-  border-radius: 6px;
+  text-decoration: underline;
   line-height: 23px;
+}
+
+.header-container .navigation a.active-icon>svg {
+  fill: white;
 }
